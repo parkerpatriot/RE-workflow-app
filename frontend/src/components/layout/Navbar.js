@@ -42,17 +42,17 @@ const Navbar = (props) => {
 				</ul>
 				<ul class="navbar-secondary-links navbar-nav">
 					<li class="nav-item">
-						<Link class="nav-link" to="/home-hunter">
+						<Link class="nav-link">
 							<i class="fas fa-bell"></i>
 						</Link>
 					</li>
 					<li class="nav-item">
-						<Link class="nav-link" to="/home-hunter">
+						<Link class="nav-link">
 							<i class="fas fa-comment"></i>
 						</Link>
 					</li>
 					<li class="nav-item">
-						<Link class="nav-link" to="/home-hunter">
+						<Link class="nav-link">
 							<i class="fas fa-user-circle"></i> Agent Name
 						</Link>
 					</li>
