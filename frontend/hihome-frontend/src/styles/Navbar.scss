@@ -1,0 +1,18 @@
+.navbar {
+	position: fixed;
+	top: 0;
+	height: $Navbar-height;
+	//width is managed in the component to fit with the current page
+	.navbar-main-links {
+		margin-right: 6vw;
+	}
+	.navbar-secondary-links {
+		margin-right: 1vw;
+		i {
+			font-size: 25px;
+		}
+		.nav-item {
+			margin-right: 1vw;
+		}
+	}
+}
