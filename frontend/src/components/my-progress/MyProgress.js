@@ -1,8 +1,9 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
 
-import Sidebar from "./Sidebar";
+import Sidebar from "./components/Sidebar";
 import Navbar from "../layout/Navbar";
-import ProgressCard from "./ProgressCard";
+import TileSet from "./components/TileSet";
 
 const MyProgress = () => {
 	return (
@@ -10,15 +11,12 @@ const MyProgress = () => {
 			<Sidebar />
 			<div className="page-container">
 				<Navbar sideBarActive={true} />
-				<div className="openning-header text-center">
-					<h1>Your journey home starts here.</h1>
-				</div>
-				<div className="content-container">
-					<ProgressCard />
-					<ProgressCard />
-					<ProgressCard />
-					<ProgressCard />
-				</div>
+				<Switch>
+					<Route
+						path="/my-progress/:progressCatagory"
+						component={TileSet}
+					/>
+				</Switch>
 			</div>
 		</div>
 	);

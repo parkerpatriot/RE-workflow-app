@@ -7,16 +7,16 @@ import { Link } from "react-router-dom";
 const Navbar = (props) => {
 	return (
 		<nav
-			class="navbar navbar-expand-lg navbar-light bg-light"
+			className="navbar navbar-expand-lg navbar-light bg-light"
 			style={props.sideBarActive ? { width: "85vw" } : { width: "100vw" }}
 		>
 			{props.sideBarActive ? null : (
-				<Link class="navbar-brand" to="/">
+				<Link className="navbar-brand" to="/">
 					HIHOME
 				</Link>
 			)}
 			<button
-				class="navbar-toggler"
+				className="navbar-toggler"
 				type="button"
 				data-toggle="collapse"
 				data-target="#navbarColor03"
@@ -24,37 +24,37 @@ const Navbar = (props) => {
 				aria-expanded="false"
 				aria-label="Toggle navigation"
 			>
-				<span class="navbar-toggler-icon"></span>
+				<span className="navbar-toggler-icon"></span>
 			</button>
 
-			<div class="collapse navbar-collapse" id="navbarColor03">
-				<ul class="navbar-main-links navbar-nav ml-auto">
-					<li class="nav-item">
-						<Link class="nav-link" to="/my-progress">
+			<div className="collapse navbar-collapse" id="navbarColor03">
+				<ul className="navbar-main-links navbar-nav ml-auto">
+					<li className="nav-item">
+						<Link className="nav-link" to="/my-progress/dashboard">
 							My Progress
 						</Link>
 					</li>
-					<li class="nav-item">
-						<Link class="nav-link" to="/home-hunter">
+					<li className="nav-item">
+						<Link className="nav-link" to="/home-hunter">
 							Home Hunter
 						</Link>
 					</li>
 				</ul>
-				<ul class="navbar-secondary-links navbar-nav">
-					<li class="nav-item">
-						<Link class="nav-link">
-							<i class="fas fa-bell"></i>
-						</Link>
+				<ul className="navbar-secondary-links navbar-nav">
+					<li className="nav-item">
+						<button className="nav-link">
+							<i className="fas fa-bell"></i>
+						</button>
 					</li>
-					<li class="nav-item">
-						<Link class="nav-link">
-							<i class="fas fa-comment"></i>
-						</Link>
+					<li className="nav-item">
+						<button className="nav-link">
+							<i className="fas fa-comment"></i>
+						</button>
 					</li>
-					<li class="nav-item">
-						<Link class="nav-link">
-							<i class="fas fa-user-circle"></i> Agent Name
-						</Link>
+					<li className="nav-item">
+						<button className="nav-link">
+							<i className="fas fa-user-circle"></i> Agent Name
+						</button>
 					</li>
 				</ul>
 			</div>

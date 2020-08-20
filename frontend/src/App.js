@@ -13,7 +13,11 @@ function App() {
 			<div className="App">
 				<Switch>
 					<Route exact path="/" component={Home} />
-					<Route exact path="/my-progress" component={MyProgress} />
+					<Route
+						exact
+						path="/my-progress/:progressCatagory"
+						component={MyProgress}
+					/>
 					<Route exact path="/home-hunter" component={HomeHunter} />
 				</Switch>
 			</div>

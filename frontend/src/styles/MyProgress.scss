@@ -5,6 +5,7 @@
 	background-color: rgb(241, 241, 241);
 	.page-container {
 		margin-left: $Sidebar-width; //This is the size of the sidebar
+		min-height: 100vh;
 		.openning-header {
 			padding: 8vh;
 		}
