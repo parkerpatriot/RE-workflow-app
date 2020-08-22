@@ -2,7 +2,7 @@
 
 .MyProgress-wrapper {
 	display: grid;
-	background-color: rgb(241, 241, 241);
+	background-color: $Ghost-white;
 	.page-container {
 		margin-left: $Sidebar-width; //This is the size of the sidebar
 		min-height: 100vh;

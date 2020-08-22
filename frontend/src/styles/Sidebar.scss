@@ -3,24 +3,48 @@
 	grid-template-rows: repeat(1fr);
 	background: linear-gradient(
 		0deg,
-		rgba(12, 12, 98, 1) 0%,
-		rgba(59, 59, 144, 1) 100%
+		rgba(27, 35, 94, 1) 30%,
+		rgba(58, 71, 148, 1) 100%
 	);
-	color: white;
+	color: $Ghost-white;
 	height: 100vh;
 	width: $Sidebar-width;
 	position: fixed;
 	top: 0;
-	justify-content: center;
 	.dashboard-banner {
 		display: grid;
 		align-content: center;
+		padding-left: 50px;
+		background: linear-gradient(
+			90deg,
+			rgba(237, 237, 242, 0.1) 1%,
+			rgba(58, 71, 148, 0) 80%
+		);
+		a {
+			font-size: 1rem;
+			text-decoration: none;
+			color: $Ghost-white;
+			font-weight: 500;
+		}
+		border-left: solid 8px;
+		max-height: 50px;
+		border-color: $Turquoise;
 	}
 	.progress-links {
+		justify-self: center;
 		.p-link {
 			margin-bottom: 3vh;
 			i {
-				font-size: 30px;
+				font-size: 1.8rem;
+			}
+			a {
+				font-size: 1rem;
+				text-decoration: none;
+				color: $Ghost-white;
+				font-weight: 500;
+			}
+			a:hover {
+				color: #637aff;
 			}
 		}
 	}

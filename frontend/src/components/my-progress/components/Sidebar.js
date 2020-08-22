@@ -8,7 +8,7 @@ const Sidebar = () => {
 				<p>HIHOME</p>
 			</div>
 			<div className="dashboard-banner">
-				<h5>Dashboard</h5>
+				<Link to="/my-progress/dashboard">Dashboard</Link>
 			</div>
 			<div className="progress-links">
 				<div className="p-link">
