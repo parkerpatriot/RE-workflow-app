@@ -8,7 +8,7 @@ const TileSet = (props) => {
 
 	const getTiles = () => {
 		axios
-			.get(`http://localhost:8000/api/tiles/${catagory}`) //Update to hosted version when applicable
+			.get(`http://localhost:8000/api/tilesets`) //Update to hosted version when applicable
 			.then((res) => {
 				console.log(res.data);
 			})
