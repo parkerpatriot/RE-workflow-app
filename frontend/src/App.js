@@ -15,7 +15,7 @@ function App() {
 					<Route exact path="/" component={Home} />
 					<Route
 						exact
-						path="/my-progress/:progressCatagory"
+						path="/my-progress/:progressStage"
 						component={MyProgress}
 					/>
 					<Route exact path="/home-hunter" component={HomeHunter} />

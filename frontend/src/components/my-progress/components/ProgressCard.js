@@ -1,21 +1,12 @@
 import React from "react";
 
-const ProgressCard = () => {
+const ProgressCard = ({ tile }) => {
 	return (
 		<div className="ProgressCard-wrapper">
-			<img
-				alt="preview"
-				src="https://source.unsplash.com/random/960x100"
-			/>
+			<img alt="preview" src={tile.image} />
 			<div className="card-content">
-				<h5>Content</h5>
-				<p>
-					Qui enim dolor sit fugiat eiusmod enim esse. Reprehenderit
-					labore adipisicing qui in deserunt mollit sint ut ipsum
-					elit. Est ipsum tempor consequat tempor in ex sit cupidatat
-					aliqua ipsum in deserunt ea. Duis minim proident esse esse
-					ut non pariatur ipsum nulla amet non.
-				</p>
+				<h5>{tile.title}</h5>
+				<p>{tile.content}</p>
 			</div>
 		</div>
 	);

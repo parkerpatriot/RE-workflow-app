@@ -4,34 +4,35 @@ import axios from "axios";
 import ProgressCard from "./ProgressCard";
 
 const TileSet = (props) => {
-	const catagory = props.match.params.progressCatagory;
+	const [currentTiles, setCurrentTiles] = React.useState([]);
+	const stage = props.match.params.progressStage;
 
-	const getTiles = () => {
+	React.useEffect(() => {
 		axios
-			.get(`http://localhost:8000/api/tilesets`) //Update to hosted version when applicable
+			.get(`http://localhost:8000/api/tiles/${stage}`) //Update to hosted version when applicable
 			.then((res) => {
-				console.log(res.data);
+				setCurrentTiles(res.data);
 			})
 			.catch((err) => {
-				console.error("getTiles() - " + err);
+				console.error(err);
 			});
-	};
+	}, [stage]);
 
 	return (
 		<div className="TileSet-wrapper">
 			<div className="openning-header text-center">
-				{catagory === "dashboard" ? (
-					<h1>Your journey home starts here.</h1>
-				) : (
-					<h1>{catagory}</h1> //Update to api data.TITLE when possible
-				)}
+				<h1>
+					{currentTiles[1]
+						? currentTiles[1].stage === "Dashboard"
+							? "Your journey home starts here."
+							: currentTiles[1].stage
+						: stage}
+				</h1>
 			</div>
 			<div className="content-container">
-				{getTiles()}
-				<ProgressCard />
-				<ProgressCard />
-				<ProgressCard />
-				<ProgressCard />
+				{currentTiles.map((tile) => (
+					<ProgressCard key={tile.id} tile={tile} />
+				))}
 			</div>
 		</div>
 	);
