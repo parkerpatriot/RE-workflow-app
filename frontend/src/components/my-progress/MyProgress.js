@@ -13,7 +13,7 @@ const MyProgress = () => {
 				<Navbar sideBarActive={true} />
 				<Switch>
 					<Route
-						path="/my-progress/:progressCatagory"
+						path="/my-progress/:progressStage"
 						component={TileSet}
 					/>
 				</Switch>
